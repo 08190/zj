@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: apx240-diagnosis-demo
+    runtime: python
+    plan: free
+    buildCommand: python -m unittest discover -s tests -q
+    startCommand: python -m apx240.public_server
+    healthCheckPath: /ready
+    autoDeployTrigger: "off"
+    envVars:
+      - key: APX_ACCESS_USER
+        value: reviewer
+      - key: APX_ACCESS_PASSWORD
+        generateValue: true
+      - key: APX_EPHEMERAL_STORAGE
+        value: "true"
+      - key: APX_HOURLY_REQUESTS
+        value: "30"
+      - key: APX_DAILY_REQUESTS
+        value: "100"
+      - key: APX_LLM_URL
+        value: https://api.openai.com/v1/chat/completions
+      - key: APX_LLM_MODEL
+        sync: false
+      - key: APX_LLM_KEY
+        sync: false
+      - key: APX_LLM_FORMAT
+        value: json_schema
+      - key: APX_EMBEDDING_URL
+        value: https://api.openai.com/v1/embeddings
+      - key: APX_EMBEDDING_MODEL
+        value: text-embedding-3-small
+      - key: APX_EMBEDDING_KEY
+        sync: false

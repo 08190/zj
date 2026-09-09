@@ -1,0 +1,37 @@
+[
+  {
+    "id": "WO-240-031",
+    "cause": "P1 支架松动并有粉尘遮挡",
+    "page": 6,
+    "section": "5. 维修记录",
+    "historical_only": true
+  },
+  {
+    "id": "WO-240-042",
+    "cause": "H1 加热回路开路",
+    "page": 6,
+    "section": "5. 维修记录",
+    "historical_only": true
+  },
+  {
+    "id": "WO-240-051",
+    "cause": "气源过滤器滤芯堵塞",
+    "page": 6,
+    "section": "5. 维修记录",
+    "historical_only": true
+  },
+  {
+    "id": "WO-240-063",
+    "cause": "G1 联锁位置偏移",
+    "page": 6,
+    "section": "5. 维修记录",
+    "historical_only": true
+  },
+  {
+    "id": "WO-240-077",
+    "cause": "主传动轴承磨损",
+    "page": 6,
+    "section": "5. 维修记录",
+    "historical_only": true
+  }
+]

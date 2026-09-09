@@ -1,0 +1,528 @@
+{
+  "report_id": "05cd1795-d09d-4a05-aef4-dbbe8d6dac9e",
+  "equipment_model": "APX-240",
+  "knowledge_version": "sha256:bd14a354609dc4f5",
+  "status": "INFO_REQUIRED",
+  "phenomenon": "A310，设备动作变慢，气压低。现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象。",
+  "known_facts": [
+    {
+      "text": "A310，设备动作变慢，气压低。现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象。",
+      "source": "现场输入（未经独立核实）"
+    }
+  ],
+  "possible_causes": [
+    {
+      "cause_id": "A310-C1",
+      "description": "可能：上游供气低",
+      "evidence_ids": [
+        "A310"
+      ],
+      "confirmed": false,
+      "ranking_basis": "手册列举顺序，未作概率估计",
+      "assessment": "RETAINED",
+      "assessment_label": "保留候选",
+      "assessment_reason": "说明书列出该原因；当前信息不足以提高或降低核对顺序",
+      "evidence_level": "说明书直接支持",
+      "verification_status": "待现场验证"
+    },
+    {
+      "cause_id": "A310-C2",
+      "description": "可能：过滤器堵塞",
+      "evidence_ids": [
+        "A310"
+      ],
+      "confirmed": false,
+      "ranking_basis": "手册列举顺序，未作概率估计",
+      "assessment": "RETAINED",
+      "assessment_label": "保留候选",
+      "assessment_reason": "说明书列出该原因；当前信息不足以提高或降低核对顺序",
+      "evidence_level": "说明书直接支持",
+      "verification_status": "待现场验证"
+    },
+    {
+      "cause_id": "A310-C3",
+      "description": "可能：调压器异常",
+      "evidence_ids": [
+        "A310"
+      ],
+      "confirmed": false,
+      "ranking_basis": "手册列举顺序，未作概率估计",
+      "assessment": "RETAINED",
+      "assessment_label": "保留候选",
+      "assessment_reason": "说明书列出该原因；当前信息不足以提高或降低核对顺序",
+      "evidence_level": "说明书直接支持",
+      "verification_status": "待现场验证"
+    },
+    {
+      "cause_id": "A310-C4",
+      "description": "可能：下游管路泄漏",
+      "evidence_ids": [
+        "A310"
+      ],
+      "confirmed": false,
+      "ranking_basis": "手册列举顺序，未作概率估计",
+      "assessment": "RETAINED",
+      "assessment_label": "保留候选",
+      "assessment_reason": "说明书列出该原因；当前信息不足以提高或降低核对顺序",
+      "evidence_level": "说明书直接支持",
+      "verification_status": "待现场验证"
+    }
+  ],
+  "evidence": [
+    {
+      "source_id": "SAFE-02",
+      "source_type": "safety_rule",
+      "filename": "APX-240_自动封装设备说明书.pdf",
+      "page": 3,
+      "section": "2. 安全红线",
+      "chunk_id": "p3-SAFE-02",
+      "version_id": "sha256:bd14a354609dc4f5",
+      "snippet": "打开防护罩、清除夹料、检查线路或接触加热组件前，必须断电、锁定、挂牌，并确认残余能量释放。",
+      "historical_only": false,
+      "authority": "安全规则",
+      "usage": "约束安全边界和升级路径"
+    },
+    {
+      "source_id": "SAFE-03",
+      "source_type": "safety_rule",
+      "filename": "APX-240_自动封装设备说明书.pdf",
+      "page": 3,
+      "section": "2. 安全红线",
+      "chunk_id": "p3-SAFE-03",
+      "version_id": "sha256:bd14a354609dc4f5",
+      "snippet": "禁止短接安全门、绕过报警、带电插拔线路或徒手触碰加热部件。",
+      "historical_only": false,
+      "authority": "安全规则",
+      "usage": "约束安全边界和升级路径"
+    },
+    {
+      "source_id": "SAFE-04",
+      "source_type": "safety_rule",
+      "filename": "APX-240_自动封装设备说明书.pdf",
+      "page": 3,
+      "section": "2. 安全红线",
+      "chunk_id": "p3-SAFE-04",
+      "version_id": "sha256:bd14a354609dc4f5",
+      "snippet": "仅授权电气/机械维修人员可执行拆线、绝缘测试、伺服或加热回路维修。",
+      "historical_only": false,
+      "authority": "安全规则",
+      "usage": "约束安全边界和升级路径"
+    },
+    {
+      "source_id": "A310",
+      "source_type": "alarm_manual",
+      "filename": "APX-240_自动封装设备说明书.pdf",
+      "page": 4,
+      "section": "3. 报警码说明",
+      "chunk_id": "p4-A310",
+      "version_id": "sha256:bd14a354609dc4f5",
+      "snippet": "A310\n气压低\n上游供气低；过滤器堵塞；调压器异常；\n下游管路泄漏\n比较上游/设备压力 → 听漏气 → 停机泄压 →\n授权人员检查",
+      "historical_only": false,
+      "authority": "设备说明书",
+      "usage": "直接支持报警含义、候选原因或排查步骤"
+    },
+    {
+      "source_id": "H03",
+      "source_type": "history_case",
+      "filename": "APX-240_自动封装设备说明书.pdf",
+      "page": 5,
+      "section": "4. 历史故障案例",
+      "chunk_id": "p5-H03",
+      "version_id": "sha256:bd14a354609dc4f5",
+      "snippet": "H03\nA310，上游 0.64 MPa、设备端 0.41\nMPa，有持续漏气声\n下游接头松动\n停机泄压后由授权人员重接并检漏",
+      "historical_only": true,
+      "authority": "历史候选",
+      "usage": "仅用于调整候选优先级，不确认本次根因"
+    },
+    {
+      "source_id": "WO-240-051",
+      "source_type": "maintenance_record",
+      "filename": "APX-240_自动封装设备说明书.pdf",
+      "page": 6,
+      "section": "5. 维修记录",
+      "chunk_id": "p6-WO-240-051",
+      "version_id": "sha256:bd14a354609dc4f5",
+      "snippet": "气源过滤器滤芯堵塞",
+      "historical_only": true,
+      "authority": "历史候选",
+      "usage": "仅用于调整候选优先级，不确认本次根因"
+    }
+  ],
+  "safety_prerequisites": [
+    "打开防护罩、清除夹料、检查线路或接触加热组件前，必须断电、锁定、挂牌，并确认残余能量释放。",
+    "禁止短接安全门、绕过报警、带电插拔线路或徒手触碰加热部件。",
+    "仅授权电气/机械维修人员可执行拆线、绝缘测试、伺服或加热回路维修。"
+  ],
+  "troubleshooting_order": [
+    {
+      "action": "比较上游/设备压力",
+      "evidence_ids": [
+        "A310"
+      ],
+      "executor": "现场人员（仅外部观察/面板读取）"
+    },
+    {
+      "action": "听漏气",
+      "evidence_ids": [
+        "A310"
+      ],
+      "executor": "现场人员（仅外部观察/面板读取）"
+    },
+    {
+      "action": "停机泄压",
+      "evidence_ids": [
+        "A310"
+      ],
+      "executor": "授权维修人员"
+    },
+    {
+      "action": "授权人员检查",
+      "evidence_ids": [
+        "A310"
+      ],
+      "executor": "授权维修人员"
+    }
+  ],
+  "missing_information": [
+    "上游压力",
+    "设备端压力",
+    "是否有漏气声"
+  ],
+  "expert_required": false,
+  "escalation_reason": "涉及授权维修时升级；当前先补充信息并完成安全的外部观察。",
+  "historical_comparison": [
+    {
+      "source_id": "H03",
+      "same": [
+        "报警码 A310"
+      ],
+      "differences": [],
+      "unknown": [
+        "上游压力未提供或存在冲突",
+        "设备端压力未提供或存在冲突",
+        "漏气声未确认"
+      ],
+      "differences_or_unknown": "上游压力未提供或存在冲突；设备端压力未提供或存在冲突；漏气声未确认",
+      "historical_observation": "A310，上游 0.64 MPa、设备端 0.41 MPa，有持续漏气声",
+      "historical_cause": "下游接头松动",
+      "current_observation": "A310，设备动作变慢，气压低。现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象。"
+    },
+    {
+      "source_id": "WO-240-051",
+      "same": [
+        "与该报警模块相关的历史维修候选"
+      ],
+      "historical_cause": "气源过滤器滤芯堵塞",
+      "current_observation": "A310，设备动作变慢，气压低。现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象。",
+      "differences_or_unknown": "原维修记录未声明报警码；按模块关联。本次部件状态未经验证，维修后验证值不代表当前读数。"
+    }
+  ],
+  "retrieval": {
+    "channel": "exact",
+    "semantic_channel": "lexical_fallback",
+    "unknown_codes": [],
+    "candidates": [],
+    "documents": [
+      {
+        "source_id": "A310",
+        "source_type": "alarm_manual",
+        "filename": "APX-240_自动封装设备说明书.pdf",
+        "page": 4,
+        "section": "3. 报警码说明",
+        "chunk_id": "p4-A310",
+        "version_id": "sha256:bd14a354609dc4f5",
+        "snippet": "A310\n气压低\n上游供气低；过滤器堵塞；调压器异常；\n下游管路泄漏\n比较上游/设备压力 → 听漏气 → 停机泄压 →\n授权人员检查",
+        "historical_only": false,
+        "authority": "",
+        "usage": "",
+        "alarm": "A310",
+        "association": "manual_alarm",
+        "score": 1
+      },
+      {
+        "source_id": "H03",
+        "source_type": "history_case",
+        "filename": "APX-240_自动封装设备说明书.pdf",
+        "page": 5,
+        "section": "4. 历史故障案例",
+        "chunk_id": "p5-H03",
+        "version_id": "sha256:bd14a354609dc4f5",
+        "snippet": "H03\nA310，上游 0.64 MPa、设备端 0.41\nMPa，有持续漏气声\n下游接头松动\n停机泄压后由授权人员重接并检漏",
+        "historical_only": true,
+        "authority": "",
+        "usage": "",
+        "alarm": "A310",
+        "association": "manual_alarm",
+        "score": 1
+      },
+      {
+        "source_id": "WO-240-051",
+        "source_type": "maintenance_record",
+        "filename": "APX-240_自动封装设备说明书.pdf",
+        "page": 6,
+        "section": "5. 维修记录",
+        "chunk_id": "p6-WO-240-051",
+        "version_id": "sha256:bd14a354609dc4f5",
+        "snippet": "2026-05-03\nWO-240-051\n气源过滤器滤芯堵塞\n停机泄压后更换滤芯、检查调压器\n设备端压力稳定在 0.62\nMPa",
+        "historical_only": true,
+        "authority": "",
+        "usage": "",
+        "alarm": "A310",
+        "association": "application_module_mapping",
+        "score": 1
+      }
+    ],
+    "error": null,
+    "notice": "离线关键词候选检索；不是向量语义 RAG。"
+  },
+  "trace": [
+    "PARSE",
+    "SAFETY_PRECHECK",
+    "RETRIEVE",
+    "EVIDENCE_VERIFY",
+    "INFO_REQUIRED",
+    "MODEL_DISABLED",
+    "FINAL_SAFETY_VERIFY",
+    "INFO_REQUIRED"
+  ],
+  "work_order": {
+    "work_order_id": "DRAFT-05cd1795",
+    "status": "DRAFT",
+    "status_label": "草稿，待人工审核",
+    "equipment": "APX-240",
+    "report_id": "05cd1795-d09d-4a05-aef4-dbbe8d6dac9e",
+    "summary": "A310，设备动作变慢，气压低。现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象。",
+    "risk_status": "INFO_REQUIRED",
+    "expert_required": false,
+    "knowledge_version": "sha256:bd14a354609dc4f5",
+    "confirmed_root_cause": null,
+    "proposed_steps": [
+      {
+        "action": "比较上游/设备压力",
+        "evidence_ids": [
+          "A310"
+        ],
+        "executor": "现场人员（仅外部观察/面板读取）"
+      },
+      {
+        "action": "听漏气",
+        "evidence_ids": [
+          "A310"
+        ],
+        "executor": "现场人员（仅外部观察/面板读取）"
+      },
+      {
+        "action": "停机泄压",
+        "evidence_ids": [
+          "A310"
+        ],
+        "executor": "授权维修人员"
+      },
+      {
+        "action": "授权人员检查",
+        "evidence_ids": [
+          "A310"
+        ],
+        "executor": "授权维修人员"
+      }
+    ],
+    "missing_information": [
+      "上游压力",
+      "设备端压力",
+      "是否有漏气声"
+    ],
+    "evidence_ids": [
+      "SAFE-02",
+      "SAFE-03",
+      "SAFE-04",
+      "A310",
+      "H03",
+      "WO-240-051"
+    ],
+    "external_sync": "未提交飞书",
+    "restart_approved": false,
+    "equipment_id": null,
+    "production_line": null,
+    "fault_occurred_at": null,
+    "reporter": null,
+    "occurrence_stage": null,
+    "assigned_role": "现场工程师",
+    "actions_taken": [],
+    "parts_used": [],
+    "verification_conditions": [],
+    "status_history": [
+      {
+        "status": "DRAFT",
+        "label": "草稿，待人工审核",
+        "actor": "系统",
+        "note": "由诊断报告生成；未确认根因或复机权限"
+      }
+    ],
+    "stop_policy": {
+      "immediate_stop": false,
+      "stop_further_operations": false,
+      "isolation_before_intrusive_work": true,
+      "restart_authorized": false,
+      "explanation": "仅按手册做外部观察；接触、拆装或清理前必须停机隔离。本报告不授权运行或复机。"
+    }
+  },
+  "current_observations": {
+    "measurements": {},
+    "conditions": {
+      "烟雾": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "焦味": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "异常高温": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "剧烈振动": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "金属摩擦": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "部件松脱": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "起火迹象": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          },
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "热封温度高": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "伺服过载": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "短接安全门": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "绕过保护": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "带电操作": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "徒手触碰加热部件": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "强行运行": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "leak": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "preheated": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "door_closed": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "door_reclosed": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "alarm_persists": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "material_present": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "p1_lit": {
+        "state": "unknown",
+        "mentions": []
+      }
+    },
+    "conflicts": [],
+    "excluded_historical_clauses": [],
+    "current_text": "A310，设备动作变慢，气压低，现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象，",
+    "equipment_mentions": []
+  },
+  "model_review": {
+    "status": "disabled",
+    "provider": "openai_compatible",
+    "notice": "未配置模型，使用离线证据规则。"
+  },
+  "session": {},
+  "stop_policy": {
+    "immediate_stop": false,
+    "stop_further_operations": false,
+    "isolation_before_intrusive_work": true,
+    "restart_authorized": false,
+    "explanation": "仅按手册做外部观察；接触、拆装或清理前必须停机隔离。本报告不授权运行或复机。"
+  },
+  "execution_metadata": {
+    "trace_id": "05cd1795-d09d-4a05-aef4-dbbe8d6dac9e",
+    "knowledge_snapshot_digest": "83112aa31fd488d3c9b748505ff855f06c0883f07190ce595ef9c756d98786a3",
+    "policy_path": "INFO_REQUIRED",
+    "retrieval_channel": "lexical_fallback",
+    "model_status": "disabled",
+    "duration_ms": 2.85
+  },
+  "next_best_question": {
+    "question": "上游压力",
+    "reason": "“上游压力”能直接区分当前报警路径中的多个手册候选原因",
+    "remaining_count": 2
+  },
+  "change_summary": []
+}

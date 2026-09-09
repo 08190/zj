@@ -1,0 +1,560 @@
+{
+  "report_id": "cefd6030-6e95-4bf9-a886-2b9ed8807d53",
+  "equipment_model": "APX-240",
+  "knowledge_version": "sha256:bd14a354609dc4f5",
+  "status": "REPORT_READY",
+  "phenomenon": "A203，设定165°C，实际128°C，加热电流0A，已完成预热。现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象。",
+  "known_facts": [
+    {
+      "text": "A203，设定165°C，实际128°C，加热电流0A，已完成预热。现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象。",
+      "source": "现场输入（未经独立核实）"
+    }
+  ],
+  "possible_causes": [
+    {
+      "cause_id": "A203-C3",
+      "description": "可能：加热器开路",
+      "evidence_ids": [
+        "A203",
+        "H02"
+      ],
+      "confirmed": false,
+      "ranking_basis": "当前已提取读数与历史相同，仅提高候选优先级，未确认根因",
+      "assessment": "PRIORITY",
+      "assessment_label": "优先核查",
+      "assessment_reason": "实际温度偏低且加热电流为0A，与加热回路未输出相符，但仍需授权人员测量确认",
+      "evidence_level": "说明书直接支持",
+      "verification_status": "待现场验证"
+    },
+    {
+      "cause_id": "A203-C4",
+      "description": "可能：继电器/线路故障",
+      "evidence_ids": [
+        "A203"
+      ],
+      "confirmed": false,
+      "ranking_basis": "手册列举顺序，未作概率估计",
+      "assessment": "PRIORITY",
+      "assessment_label": "优先核查",
+      "assessment_reason": "0A也可能来自继电器或线路路径，需与加热器开路区分",
+      "evidence_level": "说明书直接支持",
+      "verification_status": "待现场验证"
+    },
+    {
+      "cause_id": "A203-C5",
+      "description": "可能：T1 偏差",
+      "evidence_ids": [
+        "A203"
+      ],
+      "confirmed": false,
+      "ranking_basis": "手册列举顺序，未作概率估计",
+      "assessment": "RETAINED",
+      "assessment_label": "保留候选",
+      "assessment_reason": "说明书列出该原因；当前信息不足以提高或降低核对顺序",
+      "evidence_level": "说明书直接支持",
+      "verification_status": "待现场验证"
+    },
+    {
+      "cause_id": "A203-C1",
+      "description": "可能：未预热",
+      "evidence_ids": [
+        "A203"
+      ],
+      "confirmed": false,
+      "ranking_basis": "手册列举顺序，未作概率估计",
+      "assessment": "CURRENTLY_UNSUPPORTED",
+      "assessment_label": "当前证据不支持",
+      "assessment_reason": "现场已说明完成预热，当前信息不支持“未预热”",
+      "evidence_level": "说明书直接支持",
+      "verification_status": "待现场验证"
+    },
+    {
+      "cause_id": "A203-C2",
+      "description": "可能：设定错误",
+      "evidence_ids": [
+        "A203"
+      ],
+      "confirmed": false,
+      "ranking_basis": "手册列举顺序，未作概率估计",
+      "assessment": "CURRENTLY_UNSUPPORTED",
+      "assessment_label": "当前证据不支持",
+      "assessment_reason": "设定温度处于说明书稳定范围",
+      "evidence_level": "说明书直接支持",
+      "verification_status": "待现场验证"
+    }
+  ],
+  "evidence": [
+    {
+      "source_id": "SAFE-02",
+      "source_type": "safety_rule",
+      "filename": "APX-240_自动封装设备说明书.pdf",
+      "page": 3,
+      "section": "2. 安全红线",
+      "chunk_id": "p3-SAFE-02",
+      "version_id": "sha256:bd14a354609dc4f5",
+      "snippet": "打开防护罩、清除夹料、检查线路或接触加热组件前，必须断电、锁定、挂牌，并确认残余能量释放。",
+      "historical_only": false,
+      "authority": "安全规则",
+      "usage": "约束安全边界和升级路径"
+    },
+    {
+      "source_id": "SAFE-03",
+      "source_type": "safety_rule",
+      "filename": "APX-240_自动封装设备说明书.pdf",
+      "page": 3,
+      "section": "2. 安全红线",
+      "chunk_id": "p3-SAFE-03",
+      "version_id": "sha256:bd14a354609dc4f5",
+      "snippet": "禁止短接安全门、绕过报警、带电插拔线路或徒手触碰加热部件。",
+      "historical_only": false,
+      "authority": "安全规则",
+      "usage": "约束安全边界和升级路径"
+    },
+    {
+      "source_id": "SAFE-04",
+      "source_type": "safety_rule",
+      "filename": "APX-240_自动封装设备说明书.pdf",
+      "page": 3,
+      "section": "2. 安全红线",
+      "chunk_id": "p3-SAFE-04",
+      "version_id": "sha256:bd14a354609dc4f5",
+      "snippet": "仅授权电气/机械维修人员可执行拆线、绝缘测试、伺服或加热回路维修。",
+      "historical_only": false,
+      "authority": "安全规则",
+      "usage": "约束安全边界和升级路径"
+    },
+    {
+      "source_id": "A203",
+      "source_type": "alarm_manual",
+      "filename": "APX-240_自动封装设备说明书.pdf",
+      "page": 4,
+      "section": "3. 报警码说明",
+      "chunk_id": "p4-A203",
+      "version_id": "sha256:bd14a354609dc4f5",
+      "snippet": "A203\n热封温度低\n未预热；设定错误；加热器开路；继电器\n/线路故障；T1 偏差\n核对设定与预热 → 读实际温度和加热电流 →\n停机锁定 → 授权电气人员检查",
+      "historical_only": false,
+      "authority": "设备说明书",
+      "usage": "直接支持报警含义、候选原因或排查步骤"
+    },
+    {
+      "source_id": "H02",
+      "source_type": "history_case",
+      "filename": "APX-240_自动封装设备说明书.pdf",
+      "page": 5,
+      "section": "4. 历史故障案例",
+      "chunk_id": "p5-H02",
+      "version_id": "sha256:bd14a354609dc4f5",
+      "snippet": "H02\nA203，设定 165°C，实际\n128°C，加热电流 0 A\nH1 加热回路开路\n锁定挂牌，由电气维修更换损坏部件",
+      "historical_only": true,
+      "authority": "历史候选",
+      "usage": "仅用于调整候选优先级，不确认本次根因"
+    },
+    {
+      "source_id": "WO-240-042",
+      "source_type": "maintenance_record",
+      "filename": "APX-240_自动封装设备说明书.pdf",
+      "page": 6,
+      "section": "5. 维修记录",
+      "chunk_id": "p6-WO-240-042",
+      "version_id": "sha256:bd14a354609dc4f5",
+      "snippet": "H1 加热回路开路",
+      "historical_only": true,
+      "authority": "历史候选",
+      "usage": "仅用于调整候选优先级，不确认本次根因"
+    }
+  ],
+  "safety_prerequisites": [
+    "打开防护罩、清除夹料、检查线路或接触加热组件前，必须断电、锁定、挂牌，并确认残余能量释放。",
+    "禁止短接安全门、绕过报警、带电插拔线路或徒手触碰加热部件。",
+    "仅授权电气/机械维修人员可执行拆线、绝缘测试、伺服或加热回路维修。"
+  ],
+  "troubleshooting_order": [
+    {
+      "action": "核对设定与预热",
+      "evidence_ids": [
+        "A203"
+      ],
+      "executor": "现场人员（仅外部观察/面板读取）"
+    },
+    {
+      "action": "读实际温度和加热电流",
+      "evidence_ids": [
+        "A203"
+      ],
+      "executor": "现场人员（仅外部观察/面板读取）"
+    },
+    {
+      "action": "停机锁定",
+      "evidence_ids": [
+        "A203"
+      ],
+      "executor": "授权维修人员"
+    },
+    {
+      "action": "授权电气人员检查",
+      "evidence_ids": [
+        "A203"
+      ],
+      "executor": "授权维修人员"
+    }
+  ],
+  "missing_information": [],
+  "expert_required": true,
+  "escalation_reason": "排查涉及加热回路、电气或控制专家；只生成建议，授权人员执行。",
+  "historical_comparison": [
+    {
+      "source_id": "H02",
+      "same": [
+        "报警码 A203",
+        "设定温度 165 °C",
+        "实际温度 128 °C",
+        "加热电流 0 A"
+      ],
+      "differences": [],
+      "unknown": [],
+      "differences_or_unknown": "已提取的读数和条件相同；仍不能确认本次根因。",
+      "historical_observation": "A203，设定 165°C，实际 128°C，加热电流 0 A",
+      "historical_cause": "H1 加热回路开路",
+      "current_observation": "A203，设定165°C，实际128°C，加热电流0A，已完成预热。现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象。"
+    },
+    {
+      "source_id": "WO-240-042",
+      "same": [
+        "与该报警模块相关的历史维修候选"
+      ],
+      "historical_cause": "H1 加热回路开路",
+      "current_observation": "A203，设定165°C，实际128°C，加热电流0A，已完成预热。现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象。",
+      "differences_or_unknown": "原维修记录未声明报警码；按模块关联。本次部件状态未经验证，维修后验证值不代表当前读数。"
+    }
+  ],
+  "retrieval": {
+    "channel": "exact",
+    "semantic_channel": "lexical_fallback",
+    "unknown_codes": [],
+    "candidates": [],
+    "documents": [
+      {
+        "source_id": "A203",
+        "source_type": "alarm_manual",
+        "filename": "APX-240_自动封装设备说明书.pdf",
+        "page": 4,
+        "section": "3. 报警码说明",
+        "chunk_id": "p4-A203",
+        "version_id": "sha256:bd14a354609dc4f5",
+        "snippet": "A203\n热封温度低\n未预热；设定错误；加热器开路；继电器\n/线路故障；T1 偏差\n核对设定与预热 → 读实际温度和加热电流 →\n停机锁定 → 授权电气人员检查",
+        "historical_only": false,
+        "authority": "",
+        "usage": "",
+        "alarm": "A203",
+        "association": "manual_alarm",
+        "score": 1
+      },
+      {
+        "source_id": "H02",
+        "source_type": "history_case",
+        "filename": "APX-240_自动封装设备说明书.pdf",
+        "page": 5,
+        "section": "4. 历史故障案例",
+        "chunk_id": "p5-H02",
+        "version_id": "sha256:bd14a354609dc4f5",
+        "snippet": "H02\nA203，设定 165°C，实际\n128°C，加热电流 0 A\nH1 加热回路开路\n锁定挂牌，由电气维修更换损坏部件",
+        "historical_only": true,
+        "authority": "",
+        "usage": "",
+        "alarm": "A203",
+        "association": "manual_alarm",
+        "score": 1
+      },
+      {
+        "source_id": "WO-240-042",
+        "source_type": "maintenance_record",
+        "filename": "APX-240_自动封装设备说明书.pdf",
+        "page": 6,
+        "section": "5. 维修记录",
+        "chunk_id": "p6-WO-240-042",
+        "version_id": "sha256:bd14a354609dc4f5",
+        "snippet": "2026-04-16\nWO-240-042\nH1 加热回路开路\n锁定挂牌后由电气维修更换 H1\n加热组件\n165°C 稳定 30\n分钟后试产合格",
+        "historical_only": true,
+        "authority": "",
+        "usage": "",
+        "alarm": "A203",
+        "association": "application_module_mapping",
+        "score": 1
+      }
+    ],
+    "error": null,
+    "notice": "离线关键词候选检索；不是向量语义 RAG。"
+  },
+  "trace": [
+    "PARSE",
+    "SAFETY_PRECHECK",
+    "RETRIEVE",
+    "EVIDENCE_VERIFY",
+    "REPORT_READY",
+    "MODEL_DISABLED",
+    "FINAL_SAFETY_VERIFY",
+    "REPORT_READY"
+  ],
+  "work_order": {
+    "work_order_id": "DRAFT-cefd6030",
+    "status": "DRAFT",
+    "status_label": "草稿，待人工审核",
+    "equipment": "APX-240",
+    "report_id": "cefd6030-6e95-4bf9-a886-2b9ed8807d53",
+    "summary": "A203，设定165°C，实际128°C，加热电流0A，已完成预热。现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象。",
+    "risk_status": "REPORT_READY",
+    "expert_required": true,
+    "knowledge_version": "sha256:bd14a354609dc4f5",
+    "confirmed_root_cause": null,
+    "proposed_steps": [
+      {
+        "action": "核对设定与预热",
+        "evidence_ids": [
+          "A203"
+        ],
+        "executor": "现场人员（仅外部观察/面板读取）"
+      },
+      {
+        "action": "读实际温度和加热电流",
+        "evidence_ids": [
+          "A203"
+        ],
+        "executor": "现场人员（仅外部观察/面板读取）"
+      },
+      {
+        "action": "停机锁定",
+        "evidence_ids": [
+          "A203"
+        ],
+        "executor": "授权维修人员"
+      },
+      {
+        "action": "授权电气人员检查",
+        "evidence_ids": [
+          "A203"
+        ],
+        "executor": "授权维修人员"
+      }
+    ],
+    "missing_information": [],
+    "evidence_ids": [
+      "SAFE-02",
+      "SAFE-03",
+      "SAFE-04",
+      "A203",
+      "H02",
+      "WO-240-042"
+    ],
+    "external_sync": "未提交飞书",
+    "restart_approved": false,
+    "equipment_id": null,
+    "production_line": null,
+    "fault_occurred_at": null,
+    "reporter": null,
+    "occurrence_stage": null,
+    "assigned_role": "设备专家",
+    "actions_taken": [],
+    "parts_used": [],
+    "verification_conditions": [],
+    "status_history": [
+      {
+        "status": "DRAFT",
+        "label": "草稿，待人工审核",
+        "actor": "系统",
+        "note": "由诊断报告生成；未确认根因或复机权限"
+      }
+    ],
+    "stop_policy": {
+      "immediate_stop": false,
+      "stop_further_operations": false,
+      "isolation_before_intrusive_work": true,
+      "restart_authorized": false,
+      "explanation": "仅按手册做外部观察；接触、拆装或清理前必须停机隔离。本报告不授权运行或复机。"
+    }
+  },
+  "current_observations": {
+    "measurements": {
+      "set_temperature": [
+        {
+          "value": 165.0,
+          "unit": "°C",
+          "quote": "设定165°C",
+          "source": "现场输入"
+        }
+      ],
+      "actual_temperature": [
+        {
+          "value": 128.0,
+          "unit": "°C",
+          "quote": "实际128°C",
+          "source": "现场输入"
+        }
+      ],
+      "heater_current": [
+        {
+          "value": 0.0,
+          "unit": "A",
+          "quote": "加热电流0A",
+          "source": "现场输入"
+        }
+      ]
+    },
+    "conditions": {
+      "烟雾": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "焦味": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "异常高温": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "剧烈振动": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "金属摩擦": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "部件松脱": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "起火迹象": {
+        "state": "negative",
+        "mentions": [
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          },
+          {
+            "state": "negative",
+            "quote": "现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象"
+          }
+        ]
+      },
+      "热封温度高": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "伺服过载": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "短接安全门": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "绕过保护": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "带电操作": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "徒手触碰加热部件": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "强行运行": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "leak": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "preheated": {
+        "state": "positive",
+        "mentions": [
+          {
+            "state": "positive",
+            "quote": "已完成预热"
+          }
+        ]
+      },
+      "door_closed": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "door_reclosed": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "alarm_persists": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "material_present": {
+        "state": "unknown",
+        "mentions": []
+      },
+      "p1_lit": {
+        "state": "unknown",
+        "mentions": []
+      }
+    },
+    "conflicts": [],
+    "excluded_historical_clauses": [],
+    "current_text": "A203，设定165°C，实际128°C，加热电流0A，已完成预热，现场无烟雾、焦味、异常高温、剧烈振动、金属摩擦、部件松脱、火花或起火迹象，",
+    "equipment_mentions": []
+  },
+  "model_review": {
+    "status": "disabled",
+    "provider": "openai_compatible",
+    "notice": "未配置模型，使用离线证据规则。"
+  },
+  "session": {},
+  "stop_policy": {
+    "immediate_stop": false,
+    "stop_further_operations": false,
+    "isolation_before_intrusive_work": true,
+    "restart_authorized": false,
+    "explanation": "仅按手册做外部观察；接触、拆装或清理前必须停机隔离。本报告不授权运行或复机。"
+  },
+  "execution_metadata": {
+    "trace_id": "cefd6030-6e95-4bf9-a886-2b9ed8807d53",
+    "knowledge_snapshot_digest": "83112aa31fd488d3c9b748505ff855f06c0883f07190ce595ef9c756d98786a3",
+    "policy_path": "REPORT_READY",
+    "retrieval_channel": "lexical_fallback",
+    "model_status": "disabled",
+    "duration_ms": 13.65
+  },
+  "next_best_question": {},
+  "change_summary": []
+}

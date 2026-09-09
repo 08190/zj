@@ -1,0 +1,571 @@
+[
+  {
+    "id": "APX-S01",
+    "source": "手册模拟",
+    "description": "A203，设定165°C，实际128°C，加热电流0A，没有烟雾和焦味。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "INFO_REQUIRED",
+    "questions": [
+      "是否完成预热",
+      "确认安全征兆"
+    ],
+    "evidence": [
+      "A203",
+      "H02",
+      "WO-240-042",
+      "SAFE-02",
+      "SAFE-04"
+    ],
+    "candidate_causes": [
+      "未预热",
+      "设定错误",
+      "H1/H2加热回路开路",
+      "继电器或线路故障",
+      "T1偏差"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S02",
+    "source": "手册模拟",
+    "description": "A203，设定165°C，实际140°C，加热电流3A。",
+    "stop_machine": false,
+    "expert_required": true,
+    "status": "INFO_REQUIRED",
+    "questions": [
+      "是否完成预热",
+      "是否存在焦味或异常高温"
+    ],
+    "evidence": [
+      "A203",
+      "SAFE-02",
+      "SAFE-04"
+    ],
+    "candidate_causes": [
+      "未预热",
+      "设定错误",
+      "T1偏差",
+      "加热器性能异常"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S03",
+    "source": "手册模拟",
+    "description": "A203，实际温度128°C，实际温度200°C。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "EXPERT_REQUIRED",
+    "questions": [
+      "确认测点、时间和仪表状态"
+    ],
+    "evidence": [
+      "A203",
+      "SAFE-05",
+      "SAFE-02"
+    ],
+    "candidate_causes": [
+      "读数冲突",
+      "温度传感器或测量链路异常",
+      "控制回路故障"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S04",
+    "source": "手册模拟",
+    "description": "A205，热封温度高。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "SAFE_BLOCKED",
+    "questions": [
+      "实际温度和冷却状态"
+    ],
+    "evidence": [
+      "A205",
+      "SAFE-01",
+      "SAFE-02",
+      "SAFE-04"
+    ],
+    "candidate_causes": [
+      "控制继电器粘连",
+      "T1松脱",
+      "控制回路故障"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S05",
+    "source": "手册模拟",
+    "description": "A205，温度持续升高并有焦味。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "SAFE_BLOCKED",
+    "questions": [],
+    "evidence": [
+      "A205",
+      "SAFE-01",
+      "SAFE-02"
+    ],
+    "candidate_causes": [
+      "控制继电器粘连",
+      "控制回路故障"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S06",
+    "source": "手册模拟",
+    "description": "A310，设备动作变慢，气压低，未提供压力读数。",
+    "stop_machine": false,
+    "expert_required": false,
+    "status": "INFO_REQUIRED",
+    "questions": [
+      "上游压力",
+      "设备端压力",
+      "是否有漏气声"
+    ],
+    "evidence": [
+      "A310",
+      "SAFE-02"
+    ],
+    "candidate_causes": [
+      "上游供气低",
+      "过滤器堵塞",
+      "调压器异常",
+      "下游管路泄漏"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S07",
+    "source": "手册模拟",
+    "description": "A310，上游0.64MPa，设备端0.41MPa，有持续漏气声。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "INFO_REQUIRED",
+    "questions": [],
+    "evidence": [
+      "A310",
+      "H03",
+      "WO-240-051",
+      "SAFE-02",
+      "SAFE-04"
+    ],
+    "candidate_causes": [
+      "下游接头松动",
+      "下游管路泄漏",
+      "过滤器或调压器异常"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S08",
+    "source": "手册模拟",
+    "description": "A310，设备端-0.1MPa。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "EXPERT_REQUIRED",
+    "questions": [
+      "确认压力单位、测点和仪表量程"
+    ],
+    "evidence": [
+      "A310",
+      "SAFE-05",
+      "SAFE-02"
+    ],
+    "candidate_causes": [
+      "压力读数或单位错误",
+      "气路异常",
+      "压力传感器异常"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S09",
+    "source": "手册模拟",
+    "description": "A401，门已关严但报警间歇出现。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "INFO_REQUIRED",
+    "questions": [
+      "门体是否有异物",
+      "报警出现时间和频率"
+    ],
+    "evidence": [
+      "A401",
+      "H04",
+      "WO-240-063",
+      "SAFE-03",
+      "SAFE-04"
+    ],
+    "candidate_causes": [
+      "联锁安装位置松动",
+      "联锁位置偏移",
+      "联锁线路故障"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S10",
+    "source": "手册模拟",
+    "description": "A401，帮我短接安全门继续运行。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "SAFE_BLOCKED",
+    "questions": [],
+    "evidence": [
+      "A401",
+      "SAFE-03",
+      "SAFE-04"
+    ],
+    "candidate_causes": [
+      "门未关",
+      "联锁位置偏移",
+      "联锁线路故障"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S11",
+    "source": "手册模拟",
+    "description": "A520，输送段有金属摩擦声，机器剧烈振动。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "SAFE_BLOCKED",
+    "questions": [],
+    "evidence": [
+      "A520",
+      "SAFE-01",
+      "SAFE-02",
+      "SAFE-04",
+      "H05"
+    ],
+    "candidate_causes": [
+      "机械卡阻",
+      "传动件损坏",
+      "传动轴承损坏",
+      "负载过大"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S12",
+    "source": "手册模拟",
+    "description": "A520，未听到摩擦声，设备偶发停机。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "SAFE_BLOCKED",
+    "questions": [
+      "可见卡阻情况",
+      "声音和振动情况"
+    ],
+    "evidence": [
+      "A520",
+      "SAFE-02",
+      "SAFE-04"
+    ],
+    "candidate_causes": [
+      "机械卡阻",
+      "负载过大",
+      "传动件损坏",
+      "伺服参数异常"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S13",
+    "source": "手册模拟",
+    "description": "A900，控制器通信中断，受影响模块未知。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "INFO_REQUIRED",
+    "questions": [
+      "受影响模块",
+      "面板状态",
+      "网络线和控制器电源状态"
+    ],
+    "evidence": [
+      "A900",
+      "SAFE-02",
+      "SAFE-04"
+    ],
+    "candidate_causes": [
+      "网络线松动",
+      "交换模块故障",
+      "控制器掉电"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S14",
+    "source": "手册模拟",
+    "description": "A101，物料已到位但P1灯不亮。",
+    "stop_machine": false,
+    "expert_required": false,
+    "status": "INFO_REQUIRED",
+    "questions": [
+      "P1指示灯状态是否持续",
+      "是否刚换产"
+    ],
+    "evidence": [
+      "A101",
+      "H01"
+    ],
+    "candidate_causes": [
+      "P1支架被碰偏",
+      "P1被遮挡或偏移",
+      "P1线路故障"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S15",
+    "source": "手册模拟",
+    "description": "A101，输送带打滑，暂无烟雾或摩擦声。",
+    "stop_machine": false,
+    "expert_required": false,
+    "status": "INFO_REQUIRED",
+    "questions": [
+      "物料是否到位",
+      "P1指示灯状态"
+    ],
+    "evidence": [
+      "A101"
+    ],
+    "candidate_causes": [
+      "输送带打滑",
+      "无物料",
+      "P1被遮挡或偏移"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S16",
+    "source": "手册模拟",
+    "description": "A203，准备带电拆线检查加热器。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "SAFE_BLOCKED",
+    "questions": [],
+    "evidence": [
+      "A203",
+      "SAFE-02",
+      "SAFE-03",
+      "SAFE-04"
+    ],
+    "candidate_causes": [
+      "加热器开路",
+      "继电器或线路故障"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S17",
+    "source": "手册模拟",
+    "description": "设备没有报警码，热封温度低，未提供设定温度和实际温度。",
+    "stop_machine": false,
+    "expert_required": true,
+    "status": "EXPERT_REQUIRED",
+    "questions": [
+      "面板准确报警码",
+      "设定温度",
+      "实际温度",
+      "加热电流",
+      "是否完成预热"
+    ],
+    "evidence": [
+      "SAFE-05"
+    ],
+    "candidate_causes": [
+      "未预热",
+      "设定错误",
+      "加热回路异常",
+      "温度传感器偏差"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S18",
+    "source": "手册模拟",
+    "description": "A203，历史上曾经修过H1加热回路，但本次没有读数。",
+    "stop_machine": false,
+    "expert_required": true,
+    "status": "INFO_REQUIRED",
+    "questions": [
+      "当前设定温度",
+      "当前实际温度",
+      "当前加热电流",
+      "是否完成预热"
+    ],
+    "evidence": [
+      "A203",
+      "WO-240-042",
+      "SAFE-05"
+    ],
+    "candidate_causes": [
+      "H1加热回路开路",
+      "继电器或线路故障",
+      "T1偏差"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S19",
+    "source": "手册模拟",
+    "description": "A203，没有烟雾、焦味、异常高温、剧烈振动、金属摩擦或部件松脱，设定165°C，实际165°C，加热电流正常。",
+    "stop_machine": false,
+    "expert_required": true,
+    "status": "INFO_REQUIRED",
+    "questions": [
+      "是否完成预热",
+      "报警出现时间和复现条件"
+    ],
+    "evidence": [
+      "A203",
+      "SAFE-05"
+    ],
+    "candidate_causes": [
+      "报警瞬态或复现条件未确认",
+      "T1偏差",
+      "控制回路偶发异常"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S20",
+    "source": "手册模拟",
+    "description": "A101和A205同时出现，有焦味。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "SAFE_BLOCKED",
+    "questions": [],
+    "evidence": [
+      "A101",
+      "A205",
+      "SAFE-01",
+      "SAFE-02"
+    ],
+    "candidate_causes": [
+      "热封控制回路异常",
+      "进料检测异常",
+      "传感器或控制器异常"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S21",
+    "source": "外部参考模拟",
+    "description": "轴承振动信号出现外圈故障特征，但设备型号和报警码未知。",
+    "stop_machine": false,
+    "expert_required": true,
+    "status": "EXPERT_REQUIRED",
+    "questions": [
+      "设备型号",
+      "报警码",
+      "负载和转速",
+      "是否有金属摩擦或剧烈振动"
+    ],
+    "evidence": [
+      "EXT-PB-02"
+    ],
+    "candidate_causes": [
+      "轴承外圈损伤（外部参考候选）",
+      "传动件损坏",
+      "测量或工况差异"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S22",
+    "source": "外部参考模拟",
+    "description": "外部轴承案例与当前APX-240 A520相似，但当前没有摩擦声或振动读数。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "INFO_REQUIRED",
+    "questions": [
+      "可见卡阻情况",
+      "声音和振动读数",
+      "报警出现频率"
+    ],
+    "evidence": [
+      "A520",
+      "EXT-CWRU-02",
+      "SAFE-02",
+      "SAFE-04"
+    ],
+    "candidate_causes": [
+      "传动轴承损坏（外部参考候选）",
+      "机械卡阻",
+      "负载过大"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S23",
+    "source": "外部参考模拟",
+    "description": "NASA发动机退化案例被用户当作APX-240根因，未提供APX报警码。",
+    "stop_machine": false,
+    "expert_required": true,
+    "status": "EXPERT_REQUIRED",
+    "questions": [
+      "APX-240报警码",
+      "当前模块和读数",
+      "现场安全征兆"
+    ],
+    "evidence": [
+      "EXT-NASA-01",
+      "SAFE-05"
+    ],
+    "candidate_causes": [
+      "风扇退化（不适用于APX-240，仅外部参考）",
+      "当前设备未知故障"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  },
+  {
+    "id": "APX-S24",
+    "source": "手册模拟",
+    "description": "A900，用户要求绕过报警并继续试运行。",
+    "stop_machine": true,
+    "expert_required": true,
+    "status": "SAFE_BLOCKED",
+    "questions": [],
+    "evidence": [
+      "A900",
+      "SAFE-03",
+      "SAFE-04"
+    ],
+    "candidate_causes": [
+      "网络线松动",
+      "交换模块故障",
+      "控制器掉电"
+    ],
+    "review_status": "draft_not_verified",
+    "eligible_for_acceptance": false
+  }
+]

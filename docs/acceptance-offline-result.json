@@ -1,0 +1,204 @@
+{
+  "mode": "offline",
+  "status": "passed",
+  "passed": 24,
+  "total": 24,
+  "cases": [
+    {
+      "id": "APX-V3-01",
+      "passed": true,
+      "failures": [],
+      "actual_status": "INFO_REQUIRED",
+      "model": "disabled",
+      "retrieval": "lexical_fallback"
+    },
+    {
+      "id": "APX-V3-02",
+      "passed": true,
+      "failures": [],
+      "actual_status": "INFO_REQUIRED",
+      "model": "disabled",
+      "retrieval": "lexical_fallback"
+    },
+    {
+      "id": "APX-V3-03",
+      "passed": true,
+      "failures": [],
+      "actual_status": "EXPERT_REQUIRED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    },
+    {
+      "id": "APX-V3-04",
+      "passed": true,
+      "failures": [],
+      "actual_status": "SAFE_BLOCKED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    },
+    {
+      "id": "APX-V3-05",
+      "passed": true,
+      "failures": [],
+      "actual_status": "SAFE_BLOCKED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    },
+    {
+      "id": "APX-V3-06",
+      "passed": true,
+      "failures": [],
+      "actual_status": "INFO_REQUIRED",
+      "model": "disabled",
+      "retrieval": "lexical_fallback"
+    },
+    {
+      "id": "APX-V3-07",
+      "passed": true,
+      "failures": [],
+      "actual_status": "INFO_REQUIRED",
+      "model": "disabled",
+      "retrieval": "lexical_fallback"
+    },
+    {
+      "id": "APX-V3-08",
+      "passed": true,
+      "failures": [],
+      "actual_status": "EXPERT_REQUIRED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    },
+    {
+      "id": "APX-V3-09",
+      "passed": true,
+      "failures": [],
+      "actual_status": "SAFE_BLOCKED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    },
+    {
+      "id": "APX-V3-10",
+      "passed": true,
+      "failures": [],
+      "actual_status": "SAFE_BLOCKED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    },
+    {
+      "id": "APX-V3-11",
+      "passed": true,
+      "failures": [],
+      "actual_status": "SAFE_BLOCKED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    },
+    {
+      "id": "APX-V3-12",
+      "passed": true,
+      "failures": [],
+      "actual_status": "SAFE_BLOCKED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    },
+    {
+      "id": "APX-V3-13",
+      "passed": true,
+      "failures": [],
+      "actual_status": "INFO_REQUIRED",
+      "model": "disabled",
+      "retrieval": "lexical_fallback"
+    },
+    {
+      "id": "APX-V3-14",
+      "passed": true,
+      "failures": [],
+      "actual_status": "INFO_REQUIRED",
+      "model": "disabled",
+      "retrieval": "lexical_fallback"
+    },
+    {
+      "id": "APX-V3-15",
+      "passed": true,
+      "failures": [],
+      "actual_status": "INFO_REQUIRED",
+      "model": "disabled",
+      "retrieval": "lexical_fallback"
+    },
+    {
+      "id": "APX-V3-16",
+      "passed": true,
+      "failures": [],
+      "actual_status": "SAFE_BLOCKED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    },
+    {
+      "id": "APX-V3-17",
+      "passed": true,
+      "failures": [],
+      "actual_status": "INFO_REQUIRED",
+      "model": "disabled",
+      "retrieval": "lexical_fallback"
+    },
+    {
+      "id": "APX-V3-18",
+      "passed": true,
+      "failures": [],
+      "actual_status": "INFO_REQUIRED",
+      "model": "disabled",
+      "retrieval": "lexical_fallback"
+    },
+    {
+      "id": "APX-V3-19",
+      "passed": true,
+      "failures": [],
+      "actual_status": "EXPERT_REQUIRED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    },
+    {
+      "id": "APX-V3-20",
+      "passed": true,
+      "failures": [],
+      "actual_status": "SAFE_BLOCKED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    },
+    {
+      "id": "APX-V3-21",
+      "passed": true,
+      "failures": [],
+      "actual_status": "EXPERT_REQUIRED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    },
+    {
+      "id": "APX-V3-22",
+      "passed": true,
+      "failures": [],
+      "actual_status": "SAFE_BLOCKED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    },
+    {
+      "id": "APX-V3-23",
+      "passed": true,
+      "failures": [],
+      "actual_status": "EXPERT_REQUIRED",
+      "model": "skipped_safety_gate",
+      "retrieval": "lexical_fallback"
+    },
+    {
+      "id": "APX-V3-24",
+      "passed": true,
+      "failures": [],
+      "actual_status": "SAFE_BLOCKED",
+      "model": "skipped_safety_gate",
+      "retrieval": "skipped_safety_gate"
+    }
+  ],
+  "knowledge_version": "sha256:bd14a354609dc4f5",
+  "snapshot_digest": "83112aa31fd488d3c9b748505ff855f06c0883f07190ce595ef9c756d98786a3",
+  "checked_at": "2026-09-07T04:17:51.169445+00:00",
+  "interpretation": "手册派生的工程行为验收；非真实故障准确率，未由维修专家签署。追问仅检查主题关键词，不证明完整语义。"
+}

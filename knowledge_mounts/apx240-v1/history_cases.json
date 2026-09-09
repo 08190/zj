@@ -1,0 +1,47 @@
+[
+  {
+    "id": "H01",
+    "alarm": "A101",
+    "observation": "换产后 A101，物料已到位但 P1 灯不亮",
+    "cause": "P1 支架被碰偏",
+    "page": 5,
+    "section": "4. 历史故障案例",
+    "historical_only": true
+  },
+  {
+    "id": "H02",
+    "alarm": "A203",
+    "observation": "A203，设定 165°C，实际 128°C，加热电流 0 A",
+    "cause": "H1 加热回路开路",
+    "page": 5,
+    "section": "4. 历史故障案例",
+    "historical_only": true
+  },
+  {
+    "id": "H03",
+    "alarm": "A310",
+    "observation": "A310，上游 0.64 MPa、设备端 0.41 MPa，有持续漏气声",
+    "cause": "下游接头松动",
+    "page": 5,
+    "section": "4. 历史故障案例",
+    "historical_only": true
+  },
+  {
+    "id": "H04",
+    "alarm": "A401",
+    "observation": "A401 间歇出现，门已关严",
+    "cause": "联锁安装位置松动",
+    "page": 5,
+    "section": "4. 历史故障案例",
+    "historical_only": true
+  },
+  {
+    "id": "H05",
+    "alarm": "A520",
+    "observation": "A520 且输送段有周期性摩擦声",
+    "cause": "传动轴承损坏",
+    "page": 5,
+    "section": "4. 历史故障案例",
+    "historical_only": true
+  }
+]

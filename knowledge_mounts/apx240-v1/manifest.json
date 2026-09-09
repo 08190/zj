@@ -1,0 +1,16 @@
+{
+  "kb_id": "apx240",
+  "version_id": "sha256:bd14a354609dc4f5",
+  "source_filename": "APX-240_自动封装设备说明书.pdf",
+  "source_version": "原文未声明版本号",
+  "readonly": true,
+  "files": {
+    "alarms.json": "4eb620b815e28686a4d6ee450c4a0b0b7664c7143f726a310d63b6c369905662",
+    "history_cases.json": "0c0bbf5513d303ed74486c1da545d27f8162b7122895868463e87b2bc6cd11e4",
+    "maintenance_records.json": "5e03d18347df132afbbc89f6be760e91ea8648aa4429f90ae9be9e1798088b39",
+    "manual.md": "3746847a636ce1df44fa26cf0012223ef9da6dd73bf399a7bf2aff66a76052a0",
+    "manual.pdf": "bd14a354609dc4f53944dff734f5cf9e63a2b6ccf5b2a024d0b97c4a7b91f5aa",
+    "pages.json": "1bfaef27a50fe1d51f7d87d978cb5701220720cab98088a378f4b6ec66d918be",
+    "safety_rules.json": "36b5bcc0c166cd8d1ab04b54749688bc6c2dcd33c13b1dcf6dc4cbe10635fa7c"
+  }
+}
