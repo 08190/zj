@@ -12,7 +12,7 @@
 
 ## 快速启动
 
-Python 3.10 或更新版本，无需安装第三方依赖，无需 API 密钥。在本目录运行：
+Python 3.10 或更新版本,在本目录运行：
 
 ```powershell
 python -m apx240 --serve
