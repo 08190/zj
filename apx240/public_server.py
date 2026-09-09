@@ -82,7 +82,10 @@ class PublicHandler(Handler):
                 return self.send(200 if ready else 503,{'status':'ready' if ready else 'not_ready'})
             except Exception:return self.send(503,{'status':'not_ready'})
         if not self.authenticated():return self.deny(401,'请使用单独提供的演示访问账号和口令')
-        return super().do_GET()
+        # Authentication protects public read routes.  Do not reuse the local
+        # server's loopback-only GET gate: reverse proxies can legitimately
+        # rewrite Host details, which previously blocked remote browsers.
+        return self.serve_GET()
     def do_POST(self):
         if not self.authenticated():return self.deny(401,'访问身份验证失败')
         if not self.local_request():return self.deny(403,'访问来源不允许')
