@@ -24,6 +24,9 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         if not self.local_request(): return self.send(403,{'error':'Local requests only'})
+        return self.serve_GET()
+
+    def serve_GET(self):
         if self.path=='/': self.send(200,(ROOT/'web/index.html').read_bytes(),'text/html; charset=utf-8')
         elif self.path=='/manual.pdf':
             # Serve the immutable, hash-verified source bundled with this
